@@ -7,7 +7,8 @@ name = "rainmaker-http"
 version = "0.0.2"
 description = "Minimal async HTTP client for ESP RainMaker (Zehnder Multi Controller)"
 readme = "README.md"
-license = {text = "MIT"}
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [ { name = "morphiumdeus", email = "morphiumdeus@user.github.com" } ]
 requires-python = ">=3.11"
 
@@ -20,7 +21,7 @@ dependencies = [
 "Repository" = "https://example.org/rainmaker-http"
 
 [tool.setuptools]
-package-dir = {"" = ""}
+# package-dir removed; package is located at project root
 
 [project.optional-dependencies]
 dev = [
