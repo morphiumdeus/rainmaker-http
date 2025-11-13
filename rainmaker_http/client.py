@@ -10,14 +10,12 @@ and relies on simple HTTP calls using aiohttp.
 from __future__ import annotations
 
 from typing import Any, Dict, List, Optional
-import asyncio
 import logging
 
 from yarl import URL
 import aiohttp
 
 from .exceptions import (
-    RainmakerError,
     RainmakerAuthError,
     RainmakerConnectionError,
     RainmakerSetError,

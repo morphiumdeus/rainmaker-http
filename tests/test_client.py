@@ -1,11 +1,7 @@
 import pytest
-import asyncio
 
 from rainmaker_http.client import RainmakerClient
-from rainmaker_http.exceptions import (
-    RainmakerAuthError,
-    RainmakerConnectionError,
-)
+from rainmaker_http.exceptions import RainmakerAuthError
 
 
 class DummyResp:
@@ -61,6 +57,7 @@ async def test_login_and_get_nodes():
     nodes = await client.async_get_nodes()
     assert isinstance(nodes, list)
     assert nodes[0]["nodeid"] == "n1"
+
 
 @pytest.mark.asyncio
 async def test_login_invalid():
